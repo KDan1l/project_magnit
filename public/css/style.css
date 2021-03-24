@@ -6,18 +6,19 @@
   font-weight: 400;
   font-display: swap;
 }
-.light-hover{
+
+.light-hover {
   transition: all 0.5s ease;
   cursor: pointer;
 }
 
 .light-hover:hover {
-  opacity: 0.6;
-  filter: alpha(opacity=60);
+  opacity: 0.5;
+  filter: alpha(opacity=50);
   transition: all 0.5s ease;
 }
 
-.light-hover:active{
+.light-hover:active {
   opacity: 1;
   filter: alpha(opacity=100);
   transition: all 0.1s ease;
@@ -33,10 +34,7 @@ body {
 .logo {
   display: flex;
   justify-content: flex-start;
-  margin-top: 42px;
-  margin-left: 30px;
-  margin-right: 30px;
-  margin-bottom: 38px;
+  padding: 42px 30px 211px 30px;
 }
 
 
@@ -44,7 +42,13 @@ body {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 42px 30px 0 30px;
+  padding: 0 30px 0 30px;
+
+}
+
+.card__employee__avatar {
+  margin-top: -202px;
+  margin-bottom: 68px;
 }
 
 .card__wrap {
@@ -52,15 +56,15 @@ body {
   height: 0;
 }
 
-.card__form {
+
+.card__employee {
   display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: center;
   flex-wrap: wrap;
-  margin-top: 35px;
+  /* margin-top: 35px; */
   width: 308px;
-
   background: rgba(243, 243, 243, 1);
 
   box-shadow: 2px -4px 10px rgba(0, 0, 0, 0.15), -2px 4px 10px rgba(0, 0, 0, 0.15);
@@ -68,11 +72,18 @@ body {
   padding: 30px 21px 29px 22px;
 }
 
-.card__form__input {
-  outline: none;
-  width: 265px;
-  height: 27px;
-  /* height: 0px; */
+
+.card__employee__account {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.card__employee__account-text {
+  min-width: 265px;
+  min-height: 27px;
   border: none;
   border-bottom: 1px solid #000000;
   font-family: 'Loew Next', sans-serif;
@@ -81,48 +92,8 @@ body {
   font-size: 18px;
   line-height: 27px;
   margin-bottom: 25px;
-  background-color: transparent;
-  transition: all 1s ease;
-}
-
-.card__form__input::-webkit-input-placeholder {
-  opacity: 1;
-  transition: opacity 0.3s ease;
-}
-
-.card__form__input::-moz-placeholder {
-  opacity: 1;
-  transition: opacity 0.3s ease;
-}
-
-.card__form__input:-moz-placeholder {
-  opacity: 1;
-  transition: opacity 0.3s ease;
-}
-
-.card__form__input:-ms-input-placeholder {
-  opacity: 1;
-  transition: opacity 0.3s ease;
-}
-
-.card__form__input:focus::-webkit-input-placeholder {
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.card__form__input:focus::-moz-placeholder {
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.card__form__input:focus:-moz-placeholder {
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.card__form__input:focus:-ms-input-placeholder {
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  padding-bottom: 5px;
+  margin-top: 0;
 }
 
 
@@ -132,7 +103,7 @@ body {
   color: #000000;
 }
 
-.card__form__telephone-number {
+.card__employee__numbers__telephone-number {
   display: flex;
   justify-content: space-between;
   width: 278px;
@@ -144,37 +115,103 @@ body {
 
 }
 
-.telephone-number__text {
+.telephone-number-text {
+  border: none;
+  background: transparent;
+  text-decoration: none;
+  outline: none;
   margin-left: 16px;
   margin-top: 10px;
+  margin-bottom: 14px;
+  padding: 0;
+  font-family: 'Loew Next', sans-serif;
+  font-style: normal;
+  font-weight: 400;
   font-size: 18px;
   line-height: 27px;
   color: #000000;
+
 }
 
-.card__form__telephone-number:first-child {
-  margin-top: 5px;
+.telephone-number-text::-webkit-input-placeholder {
+  opacity: 1;
+  transition: opacity 0.3s ease;
 }
 
-.card__form__delete-number{
+.telephone-number-text::-moz-placeholder {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.telephone-number-text:-moz-placeholder {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.telephone-number-text:-ms-input-placeholder {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.telephone-number-text:focus::-webkit-input-placeholder {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.telephone-number-text:focus::-moz-placeholder {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.telephone-number-text:focus:-moz-placeholder {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.telephone-number-text:focus:-ms-input-placeholder {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+
+
+
+.delete-number__minus {
+  width: 35px;
+  height: 35px;
+  border-radius: 60px;
   margin-top: 8px;
   margin-right: 19px;
   margin-bottom: 8px;
-
-}
- 
-.card__form__input + .card__form__telephone-number > .card__form__delete-number {
-  display: none;
 }
 
 
+.card__employee__numbers {
+  margin-top: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+
+.card__employee__numbers__add-number {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.add-number__plus{
+  width: 35px;
+height: 35px;
+}
 
 
-.card__button-save {
+
+.card__employee__numbers__button-save {
   outline: none;
-  margin-top: 38px;
+  margin-top: 67px;
+  margin-bottom: -127px;
   padding: 15px 40px;
-  position: relative;
   width: 194px;
   height: 60px;
   border: none;
@@ -188,103 +225,50 @@ body {
   transition: all 500ms ease;
 }
 
-/*
-.card__button-save:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 194px;
-  height: 0;
-  background: rgba(255, 255, 255, 0.3);
-  border-radius: 60px;
-  transition: all 0.5s ease;
-} 
-
-.card__button-save:hover:before {
-  height: 100%;
-}
-
-*/
-
-.card__button-save:active{
+.card__employee__numbers__button-save:active {
   opacity: 1;
   filter: alpha(opacity=100);
   transition: all 0.5s ease;
 }
 
 
-
-.card__button-exit {
+.card__employee__account__button-exit {
   outline: none;
-  margin-top: 33px;
+  margin-top: 349px;
+  margin-bottom: -409px;
   width: 149px;
   height: 60px;
   padding: 15px 40px;
-  position: relative;
   background-color: rgba(227, 6, 19, 0);
-
   border: 1px solid #000000;
   box-sizing: border-box;
   border-radius: 60px;
-
   font-weight: normal;
   font-size: 20px;
   line-height: 30px;
   color: #000000;
+  /*  
+  при добавлении новых номеров
+  останется на месте -> JS 
+*/
 
 }
 
-.card__button-exit:active{
+.card__employee__account__button-exit:active {
   opacity: 1;
   filter: alpha(opacity=100);
   transition: all 0.5s ease;
 }
-
-/*
-
-.card__button-exit:before {
-	content:'';
-	position: absolute;
-	top: 0;
-	left: 0;
-  width: 0;
-  height: 60px;
-	background: rgba(206, 206, 206, 0.3);
-	border-radius: 60px;
-	transition: all 2s ease;
-}
-
-.card__button-exit:hover:before {
-  width: 100%;
-}
-
-*/
-
 
 .card__warning {
   width: 299px;
   height: 81px;
   font-size: 18px;
   line-height: 27px;
-  margin: 38px 16px 42px 0;
+  margin: 229px 16px 42px 0;
   color: rgba(0, 0, 0, 0.7);
 
 }
-
-/*
-
-.footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: start;
-  align-content: space-between;
-  flex-wrap: wrap;
-  height: 127px;
-  background: rgba(0, 0, 0, 0.85);
-  padding: 33px 30px 33px 30px;
-}
-*/
 
 .footer {
   display: flex;
@@ -311,6 +295,8 @@ body {
   width: 219px;
   height: 49px;
   margin-top: 0;
+  margin-bottom: 0;
+  text-decoration: none;
 }
 
 .text-policy {
@@ -325,6 +311,10 @@ body {
   margin-right: calc(50% - 154px);
   text-decoration: none;
   align-self: center;
+}
+
+.card__employee__table-link {
+  display: none;
 }
 
 
@@ -351,5 +341,134 @@ body {
     margin-right: 174px;
   }
 
+}
+
+@media (min-width: 1170px) {
+  .logo {
+    padding-top: 60px;
+    padding-left: calc(50% - 585px);
+    padding-right: calc(50% - 585px);
+    padding-bottom: 50px;
+  }
+
+  .card {
+    padding-left: calc(50% - 585px);
+    padding-right: calc(50% - 585px);
+    margin-bottom: 132px;
+  }
+
+  .card__employee {
+    flex-direction: row;
+     justify-content:space-between;
+    align-items:flex-start;
+    flex-wrap: wrap;
+    width: 1770px;
+    padding: 52px 80px 53px 80px;
+    background-image: url("../img/Ellipse\ 5.png");
+    background-size: 708px 890.5px;
+    background-repeat: no-repeat;
+    background-position-x: right;    
+  }
+
+
+  .card__employee__account {
+    margin-top: -99px;
+    padding-bottom: 0;
+    width: 481px;
+    min-height: 663px;
+    background: #F5F5F5;
+    border-radius: 60px;
+    order:2;
+  }
+
+  .card__employee__avatar {
+    margin-top: 47px;
+    margin-bottom: 35px;
+  }
+
+  .card__employee__account__button-exit {
+    margin-top: 20px;
+    margin-bottom: 47px;
+  }
+
+  .card__employee__account-text {
+    font-size: 20px;
+    line-height: 30px;
+    min-width: 401px;
+    min-height: 27px;
+    padding-left: 11px;
+
+  }
+
+  .card__warning {
+    display: none;
+  }
+
+  .card__employee__table-link {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content:start;    
+    text-decoration: none;
+    width: 449px;
+    height: 35px;
+    margin-bottom: 64px;
+  }
+
+  .card__employee__table-link-text {
+    margin: 0;
+    font-size: 20px;
+    line-height: 30px;
+    color: #000000;
+  }
+
+  .left-arrow {
+    width: 34px;
+    height: 35px;
+    margin-right: 15px;
+  }
+
+  .card__employee__numbers__telephone-number {
+    min-width: 449px;
+    min-height: 80px;
+    margin-bottom: 35px;
+
+  }
+
+  .delete-number__minus {
+    width: 38px;
+    height: 38px;
+    margin-top: 21px;
+    margin-left: 17px;
+    margin-bottom: 21px;
+  }
+
+  .telephone-number-text {
+    font-size: 20px;
+    line-height: 30px;
+    margin-left: 50px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+  
+  .card__employee__numbers{
+    width: 449px;
+  }
+
+  .add-number__plus{
+    width: 38px;
+  height: 38px;
+  }
+
+  .card__employee__numbers__button-save{
+    margin-top: 50px;
+    margin-bottom: 71px;
+  }
+
+  .footer{
+    height: 72px;
+    padding-left: calc(50% - 585px);
+    padding-right: calc(50% - 585px);
+    justify-content: space-between;
+  }
 
 }
