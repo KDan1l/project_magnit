@@ -1,17 +1,109 @@
 <!DOCTYPE html>
-<html lang="">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title><%= htmlWebpackPlugin.options.title %></title>
-  </head>
-  <body>
-    <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-  </body>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Магнит</title>
+</head>
+
+<body>
+  <div id="app"></div>
+  <section class="logo">
+    <a href="https://magnit.ru/">
+      <img class="light-hover" src="img/Лого.svg" alt="logo">
+    </a>
+  </section>
+  <section class="card">
+
+    <div class="card__employee">
+
+
+      <a class="light-hover card__employee__table-link" href="">
+        <img src="img/right 1.svg" alt="к таблице" class="left-arrow">
+        <p class="card__employee__table-link-text">К таблице</p>
+      </a>
+
+      <div class="card__employee__account">
+
+
+
+        <img class="card__employee__avatar" src="img/Ава.svg" alt="avatar">
+
+        <p class="card__employee__account-text">Иванов Андрей Семёнович</p>
+        <p class="card__employee__account-text">27 января 1983</p>
+        <p class="card__employee__account-text">IvanovAS@gmail.com</p>
+        <p class="card__employee__account-text">Отдел маркетинга</p>
+        <p class="card__employee__account-text">Начальник отдела</p>
+
+
+        <button class="card__employee__account__button-exit light-hover">
+          Выход
+        </button>
+      </div>
+
+
+      <div class="card__wrap"></div>
+
+      <form action="#" method="post" class="card__employee__numbers">
+
+
+
+        <div class="card__employee__numbers__telephone-number">
+          <input type="text" name="number" class="telephone-number-text" placeholder="Введите номер"
+            value="+7 (960) 217-34-19"></input>
+
+          <img class="delete-number__minus light-hover" src="img/Минус.svg" alt="Удалить номер">
+
+        </div>
+
+        <div class="card__employee__numbers__telephone-number">
+          <input type="text" name="number" class="telephone-number-text" placeholder="Введите номер"
+            value="+7 (666) 323-45-23"></input>
+
+          <img class="delete-number__minus light-hover" src="img/Минус.svg" alt="Удалить номер">
+
+        </div>
+
+
+
+        <div class="card__employee__numbers__add-number light-hover">
+          <img src="img/Плюс.svg" alt="добавить номер" class="add-number__plus">
+        </div>
+
+        <div class="card__wrap"></div>
+
+        <button class="card__employee__numbers__button-save light-hover">
+          Сохранить
+        </button>
+
+      </form>
+
+
+
+    </div>
+    <div class="card__wrap"></div>
+    <p class="card__warning">
+      *Для редактирования таблицы
+      перейдите в полную версию
+      сайта
+    </p>
+  </section>
+  <footer class="footer">
+    <a class="footer__logo-link" href="https://magnit.ru/">
+      <img class="footer__logo light-hover" src="img/Лого футер.svg" alt="footer-logo">
+    </a>
+    <p class="footer__text text-support">
+      Техническая поддержка: <br>
+      8 800 200-90-02
+    </p>
+    <a href="https://magnit.ru/" class="footer__text text-policy light-hover">
+      Политика обработки персональных
+      данных
+    </a>
+  </footer>
+</body>
+
 </html>
