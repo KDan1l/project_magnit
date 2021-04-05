@@ -11,7 +11,12 @@ const routes = [
     path: '/account',
     name: 'account',
     component: () => import('../views/Account.vue')
-  }
+  },
+  {
+    path: '/admin',
+    name: 'admin',
+    component: () => import('../views/TableAdmin.vue')
+  },
 ]
 
 const router = createRouter({
