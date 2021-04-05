@@ -97,7 +97,7 @@
 export default {
   data() {
     return {
-      phones: [],
+      phones: ["7 931 9384988"],
     };
   },
   methods: {
