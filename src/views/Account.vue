@@ -6,7 +6,7 @@
   </section>
   <section class="card">
     <div class="card__employee">
-      <a class="light-hover card__employee__table-link" href="">
+      <a class="light-hover card__employee__table-link" href="./admin">
         <img src="img/right 1.svg" alt="к таблице" class="left-arrow" />
         <p class="card__employee__table-link-text">К таблице</p>
       </a>

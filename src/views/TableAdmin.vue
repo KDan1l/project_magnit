@@ -22,7 +22,7 @@
         </a>
         <div class="nav__list__togler">
           <p class="nav__list__togler__item">
-            <a class="light-hover nav-text" href="#">Личный кабинет</a>
+            <a class="light-hover nav-text" href="./account">Личный кабинет</a>
           </p>
           <p class="nav__list__togler__item">
             <a class="light-hover nav-text" href="#">Выход</a>
