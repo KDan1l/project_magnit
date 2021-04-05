@@ -85,8 +85,12 @@
         <button class="card__employee__numbers__button-save light-hover">
           Сохранить
         </button>
+        <button class="card__employee__account__button-exit-mobile light-hover">
+          Выход
+        </button>
       </form>
     </div>
+
     <div class="card__wrap"></div>
     <p class="card__warning">
       *Для редактирования таблицы перейдите в полную версию сайта
